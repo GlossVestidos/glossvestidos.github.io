@@ -1,0 +1,364 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Define el modelo de caja para todos los elementos */
+    text-decoration: none; /* Quita el subrayado del enlace */ 
+    a {
+        color:black; /* Color de los enlaces no visitados */
+        text-decoration: none; /* Sin subrayado */
+      }
+      
+      /* Estilo para los enlaces visitados */
+      a:visited {
+        color: black; /* Mismo color que los no visitados */
+        text-decoration: none; /* Sin subrayado */
+      }
+    
+  }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    font-size: 30px; /* Tamaño del texto para el logo */
+    color: #000000; /* Color blanco para el logo */
+    text-decoration: none; /* Quita el subrayado del enlace */  
+    font-family: "Dancing Script", serif;
+    font-optical-sizing: auto;
+    font-weight: 15;
+    font-style: normal;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: "Dancing Script", serif;
+    margin: 0 15px; /* Espaciado entre los enlaces del menú */
+  
+}
+
+nav ul li a:hover {
+    color: #ff5e57;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+    white-space: nowrap; /* Evita que el texto se divida */
+    margin: 0; /* Elimina cualquier margen adicional */
+}
+
+footer {
+    text-align: center;
+    background-color: #f8f8f8;
+    border-top: 2px solid #e0e0e0;
+    padding: 20px 30px; /* Espaciado interno */
+}
+
+.productos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.producto {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    width: 300px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #fff;
+}
+
+.producto img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.producto h3 {
+    font-size: 1.2em;
+ 
+    white-space: nowrap; /* Evita que el texto se divida */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); /* Mejora la visibilidad */
+    margin: 0; /* Elimina cualquier margen adicional */
+}
+
+.producto p {
+    white-space: nowrap; /* Evita que el texto se divida */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); /* Mejora la visibilidad */
+    margin: 0; /* Elimina cualquier margen adicional */
+   
+}
+
+.precio {
+    color: #ec5e3a;
+    font-weight: bold;
+}
+button {
+    background-color: #111; /* Fondo oscuro para el botón */
+    color: #fff; /* Texto blanco */
+    padding: 10px; /* Espaciado interno del botón */
+    border: none; /* Quita el borde del botón */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar por el botón */
+    border-radius: 5px; /* Bordes redondeados */
+  }
+.social-button {
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Botón de WhatsApp */
+  .whatsapp {
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+  }
+  
+  .whatsapp img {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .whatsapp:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Botón de Instagram */
+  .instagram {
+    bottom: 90px; /* Ajusta para que no se solape con WhatsApp */
+    right: 20px;
+    background: radial-gradient(circle at 30% 30%, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  }
+  
+  .instagram img {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .instagram:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Hacer que la fuente se ajuste en dispositivos móviles */
+@media screen and (max-width: 768px) {
+  body {
+      font-size: 14px; /* Ajusta el tamaño de la fuente para pantallas pequeñas */
+  }
+
+  header {
+      flex-direction: column; /* Coloca los elementos del header en columna */
+      text-align: center;
+  }
+
+  .logo-container {
+      font-size: 25px;
+  }
+
+  nav ul {
+      flex-direction: column; /* Muestra los enlaces del menú en columna */
+      gap: 10px;
+  }
+
+  nav ul li a {
+      font-size: 24px; /* Ajusta el tamaño de los enlaces del menú */
+  }
+
+  .productos {
+      flex-direction: column; /* Muestra los productos en columna */
+      align-items: center;
+  }
+
+  .producto {
+      width: 90%; /* Hace que los productos ocupen el 90% del ancho */
+      margin: 10px 0; /* Espaciado entre los productos */
+  }
+
+  footer {
+      padding: 10px 20px;
+  }
+}
+
+/* Ajustes para tablets */
+@media screen and (max-width: 1024px) {
+  body {
+      font-size: 16px;
+  }
+
+  .logo-container {
+      font-size: 28px;
+  }
+
+  nav ul {
+      gap: 12px;
+  }
+
+  nav ul li a {
+      font-size: 26px;
+  }
+
+  .productos {
+      justify-content: space-between; /* Ajusta el espacio entre los productos */
+  }
+
+  .producto {
+      width: 45%; /* Los productos ocupan el 45% del ancho */
+  }
+}
+
+/* Estilo general */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f8f8;
+  padding: 10px 20px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  color: #000000;
+  text-decoration: none;  
+  font-family: "Dancing Script", serif;
+  font-weight: 15;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: "Dancing Script", serif;
+}
+
+footer {
+  text-align: center;
+  background-color: #f8f8f8;
+  border-top: 2px solid #e0e0e0;
+  padding: 20px 30px;
+}
+
+.productos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.producto {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  width: 300px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #fff;
+}
+
+.producto img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.producto h3 {
+  font-size: 1.2em;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
+
+.producto p {
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
+
+.precio {
+  color: #ec5e3a;
+  font-weight: bold;
+}
+
+button {
+  background-color: #111;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+  
